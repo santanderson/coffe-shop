@@ -8,24 +8,23 @@
 
 body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: brown;
 }
 
 /*Header*/
+
 header{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
-
 }
-
 .logo{
     color: brown;
     font-weight: 400;
     font-size: 35px;
     padding: 30px;
 }
-
 header nav{
     display: none;
     flex-flow: row nowrap;
@@ -39,13 +38,10 @@ nav li{
     font-size: 17px;
     font-weight: 200;
 }
-
 nav li a{
-    transition: 0.4s;
     color: brown;
     text-decoration: none;
 }
-
 header button{
     background-color: transparent;
     border: none;
@@ -62,34 +58,51 @@ header button{
     }
 }
 
-/*Main Section*/
+/*Main section settings*/
 
-main .cta{
-    background-image: linear-gradient(rgba(15, 0, 0, 0.7), rgba(15, 0, 0, 0.7)),url(assets/cafe-gb52de6006_1920.jpg);
+main section div{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: center;
+    height: inherit;
+    padding: 20px;
+}
+main section{
+    text-align: center;
+    height: 80vh;
+}
+main section h1{
+    font-size: 35px;
+    margin: 30px 0;
+}
+main section p{
+    font-size: 20px;
+}
+main section.cta, main section.coffee-menu{
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    display: flex;
-    flex-flow: column nowrap;
-    text-align: center;
-    justify-content: center;
     color: white;
-    height: 80vh;
 }
-main div{
-    margin: 20px;
+
+/*Section cta*/
+
+main section.cta{
+    background-image: linear-gradient(rgba(15, 0, 0, 0.7), rgba(15, 0, 0, 0.7)),url(assets/cafe-gb52de6006_1920.jpg);
+}
+main section.cta div{
+    justify-content: center;
 }
 .cta h1{
-    font-size: 35px;
     margin: 20px 0px;
 }
 .cta h2, .cta p{
     font-size: 20px;
     margin: 10px 0;
 }
-
 .cta button{
-    transition: 0.3s;
+    transition: 0.2s;
     background: transparent;
     border: 1px solid white;
     cursor: pointer;
@@ -103,42 +116,44 @@ main div{
 }
 
 .cta button:hover{
-    transition: 0.3s;
+    transition: 0.2s;
     box-shadow: 0px 0px 5px white;
 }
-/*Main Breakpoint*/
+
+/*Main and Section cta Breakpoints*/
 
 @media(min-width: 370px){
-    main .cta{
+    main section.cta{
         height: 75vh;
     }
 }
-
 @media(min-width:537px){
-    main .cta{
+    main section{
         height: 70vh;
     }
-
     .cta button{
         margin-top: 30px;
         width: 185px;
         font-size: 15px;
     }
 }
-
 @media(min-width: 684px){
-    main .cta{
+    main h1{
+        font-size: 40px;
+    }
+    main p{
+        font-size: 25px;
+    }
+    main section, main section.cta{
         height: 80vh;
     }
     .cta h1{
-        font-size: 40px;
         margin: 30px 0;
     }
     .cta h2, .cta p{
         font-size: 25px;
         margin: 20px 0;
     }
-
     .cta button{
         width: 200px;
         padding: 25px;
@@ -146,8 +161,13 @@ main div{
     }
 }
 @media(min-width:1020px){
-    .cta h1{
+    main h1{
         font-size: 50px;
+    }
+    main p{
+        font-size: 30px;
+    }
+    .cta h1{
         margin: 35px 0;
     }
     .cta h2, .cta p{
@@ -159,4 +179,37 @@ main div{
         width: 250px;
         font-size: 17px;
     }
+}
+
+/*Section Description*/
+
+main .description div .p{
+    justify-content: center;
+    color: black;
+} 
+
+/*Description Breakpoints*/
+@media(max-width: 426px){
+    main section.description{
+        height: 90vh;
+    }
+}
+@media(max-width: 396px){
+    main section.description{
+        height: 100vh;
+    }
+}
+@media(max-width: 326px){
+    main section.description{
+        height: 120vh;
+    }
+}
+/*Coffee Menu*/
+
+main section.coffee-menu{
+    background-image: linear-gradient(rgba(15, 0, 0, 0.7), rgba(15, 0, 0, 0.7)),url(assets/coffee-g25b5693bc_1920.jpg);
+}
+
+main .coffee-menu div .p{
+    justify-content: center;
 }
