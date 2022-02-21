@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
     <title>Milkoff | Coffe Shop</title>
 </head>
-<body>
+<body onload="update(), loop()">
     <header>
         <span class="logo">Milk Off</span>
 
@@ -48,8 +49,17 @@
             <div>
                 <h1>Coffee Menu</h1>
 
-                <div class="p">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum quod, exercitationem possimus, fugit quasi minus expedita debitis dolores repellendus officiis repellat tempora, distinctio ducimus maiores ipsum! Repellat maxime assumenda qui.</p>
+                <div class="coffee-drinks">
+                    <ul class="slider">
+                        <li>
+                            <a id="slider-link">
+                                <img alt="slider image" id="slider-image">
+                                <p id="drink-name">Café</p>
+                            </a>
+                            <a href="javascript:prev()">Previous</a>
+                            <a href="javascript:next()">Next</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>

@@ -72,11 +72,11 @@ main section{
     text-align: center;
     height: 80vh;
 }
-main section h1{
+main section div h1{
     font-size: 35px;
     margin: 30px 0;
 }
-main section p{
+main section div p{
     font-size: 20px;
 }
 main section.cta, main section.coffee-menu{
@@ -138,7 +138,7 @@ main section.cta div{
     }
 }
 @media(min-width: 684px){
-    main h1{
+    main section div h1{
         font-size: 40px;
     }
     main p{
@@ -161,13 +161,14 @@ main section.cta div{
     }
 }
 @media(min-width:1020px){
-    main h1{
+    main section div h1{
         font-size: 50px;
     }
     main p{
         font-size: 30px;
     }
     .cta h1{
+        
         margin: 35px 0;
     }
     .cta h2, .cta p{
@@ -210,6 +211,21 @@ main section.coffee-menu{
     background-image: linear-gradient(rgba(15, 0, 0, 0.7), rgba(15, 0, 0, 0.7)),url(assets/coffee-g25b5693bc_1920.jpg);
 }
 
-main .coffee-menu div .p{
+.coffee-menu div .coffee-drinks{
+    display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
+    width: 100%;
+}
+.coffee-menu ul{
+    list-style: none;
+}
+.coffee-drinks ul li a p{
+    color: white;
+    text-decoration: none;
+}
+
+.coffee-drinks ul li a img{
+    border-radius: 50%;
+    width: 170px;
 }
