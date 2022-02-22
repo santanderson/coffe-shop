@@ -21,8 +21,8 @@ header{
 }
 .logo{
     color: brown;
-    font-weight: 400;
-    font-size: 35px;
+    font-weight: 600;
+    font-size: 37px;
     padding: 30px;
 }
 header nav{
@@ -35,10 +35,10 @@ header nav{
 
 nav li{
     padding: 20px;
-    font-size: 17px;
     font-weight: 200;
 }
 nav li a{
+    font-size: 18px;
     color: brown;
     text-decoration: none;
 }
@@ -301,4 +301,19 @@ section.contact div .contact-field{
 }
 .contact-field button:hover a{
     color: brown;
+}
+
+/*footer*/
+
+footer{
+    background-image: linear-gradient(rgba(15, 0, 0, 0.6), rgba(15, 0, 0, 0.6)),url(assets/coffee-g378131b19_1920.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    height: 40vh;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: end;
+    justify-content: end;
+    padding: 20px;
 }
