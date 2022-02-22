@@ -86,6 +86,25 @@ main section.cta, main section.coffee-menu{
     color: white;
 }
 
+main section button{
+    transition: 0.2s;
+    background: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+    width: 170px;
+    padding: 20px;
+    margin-top: 20px;
+}
+main section button a{
+    color: white;
+    text-decoration: none;
+}
+
+main section button:hover{
+    transition: 0.2s;
+    box-shadow: 0px 0px 5px white;
+}
+
 /*Section cta*/
 
 main section.cta{
@@ -101,24 +120,6 @@ main section.cta div{
     font-size: 20px;
     margin: 10px 0;
 }
-.cta button{
-    transition: 0.2s;
-    background: transparent;
-    border: 1px solid white;
-    cursor: pointer;
-    width: 170px;
-    padding: 20px;
-    margin-top: 20px;
-}
-.cta button a{
-    color: white;
-    text-decoration: none;
-}
-
-.cta button:hover{
-    transition: 0.2s;
-    box-shadow: 0px 0px 5px white;
-}
 
 /*Main and Section cta Breakpoints*/
 
@@ -131,7 +132,7 @@ main section.cta div{
     main section{
         height: 70vh;
     }
-    .cta button{
+    main section button{
         margin-top: 30px;
         width: 185px;
         font-size: 15px;
@@ -154,7 +155,7 @@ main section.cta div{
         font-size: 25px;
         margin: 20px 0;
     }
-    .cta button{
+    main section button{
         width: 200px;
         padding: 25px;
         font-size: 16px;
@@ -175,7 +176,7 @@ main section.cta div{
         font-size: 30px;
         margin: 20px 0;
     }
-    .cta button{
+    main section button{
         color: rgba(255, 255, 255, 0.5);
         width: 250px;
         font-size: 17px;
@@ -208,24 +209,96 @@ main .description div .p{
 /*Coffee Menu*/
 
 main section.coffee-menu{
-    background-image: linear-gradient(rgba(15, 0, 0, 0.7), rgba(15, 0, 0, 0.7)),url(assets/coffee-g25b5693bc_1920.jpg);
+    background-image: linear-gradient(rgba(15, 0, 0, 0.6), rgba(15, 0, 0, 0.6)),url(assets/coffee-g25b5693bc_1920.jpg);
 }
-
-.coffee-menu div .coffee-drinks{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+.coffee-drinks{
+    margin-top: 60px;
+    list-style: none;
     width: 100%;
 }
-.coffee-menu ul{
-    list-style: none;
+.coffee-drinks li{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
-.coffee-drinks ul li a p{
+.coffee-drinks li a{
+    text-decoration: none;
+    border-radius: 50%;
+}
+.coffee-drinks li a p{
     color: white;
     text-decoration: none;
 }
-
-.coffee-drinks ul li a img{
+.coffee-drinks li a.slider-nav p{
+    font-size: 40px;
+}
+.coffee-drinks li a img{
+    transition: 0.2s;
+    border: 2px solid white;
     border-radius: 50%;
     width: 170px;
+}
+.coffee-drinks li a img:hover{
+    transition: 0.2s;
+    box-shadow: 0px 0px 5px white;
+}
+/*Coffee Menu Breakpoints*/
+
+@media(min-width:537px){
+    .coffee-drinks{
+        margin-top: 30px;
+    }
+    .coffee-drinks li a img{
+        width: 200px;
+    }
+}
+@media(min-width: 684px){
+    .coffee-drinks{
+        margin-top: 40px;
+    }
+    .coffee-drinks li a img{
+        width: 230px;
+    }
+}
+@media(min-width: 1020px){
+    .coffee-drinks{
+        margin-top: 30px;
+    }
+}
+
+/*Contact Section*/
+
+section.contact div .contact-field{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
+.contact-field a{
+    transition: 0.2s;
+    color: brown;
+    text-decoration: none;
+    font-size: 20px;
+}
+.contact-field a:hover:not(button a){
+    transition: 0.2s;
+    text-decoration: underline;
+}
+
+.contact-field button{
+    border: none;
+    background-color: brown;
+}
+.contact-field button a{
+    color: white;
+    font-size: 16px;
+}
+.contact-field button:hover{
+    border: 1px solid brown;
+    background-color: transparent;
+}
+.contact-field button:hover a{
+    color: brown;
 }
